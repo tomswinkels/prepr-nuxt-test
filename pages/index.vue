@@ -21,16 +21,16 @@
 
 <script setup>
 
+// Load Prepr  Lib
+import {Prepr} from "/lib/prepr.js";
+
 // Import the query
-// import { GetArticles } from "@/queries/getArticles";
+import GetArticles from "/queries/get-articles.js";
 
 // Request the data from Prepr
-// const { data } = await useAsyncQuery(GetArticles);
+const response = await Prepr(GetArticles)
 
 // Assign the articles variable to all the articles from Prepr
-const articles = {};
-
-/* Optional: Print query output to the terminal */
-// console.log(JSON.stringify(articles, undefined, 2));
+const articles = response.data.Articles.items;
 
 </script>
