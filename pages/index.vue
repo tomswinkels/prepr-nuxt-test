@@ -1,7 +1,5 @@
 <!-- ./app.vue -->
 
-<!-- ./app.vue -->
-
 <template>
     <div>
         <h1>My blog site</h1>
@@ -24,15 +22,15 @@
 <script setup>
 
 // Import the query
-import { GetArticles } from "@/queries/getArticles";
+// import { GetArticles } from "@/queries/getArticles";
 
 // Request the data from Prepr
-const { data } = await useAsyncQuery(GetArticles);
+// const { data } = await useAsyncQuery(GetArticles);
 
 // Assign the articles variable to all the articles from Prepr
-const articles = data.value.Articles.items;
+const articles = {};
 
 /* Optional: Print query output to the terminal */
-console.log(JSON.stringify(articles, undefined, 2));
+// console.log(JSON.stringify(articles, undefined, 2));
 
 </script>

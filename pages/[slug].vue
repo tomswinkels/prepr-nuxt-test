@@ -28,18 +28,18 @@
 
 <script setup>
 import { useRoute } from "vue-router";
-import { GetArticleDetail } from "@/queries/getArticleBySlug";
+// import { GetArticleDetail } from "@/queries/getArticleBySlug";
 
 // Use vue-router to determine the slug in the URL
 const route = useRoute();
 const slug = route.params.slug;
 
 // Request an article by the slug
-const articleQuery = await useAsyncQuery(GetArticleDetail, {
-    "slug": slug
-});
+// const articleQuery = await useAsyncQuery(GetArticleDetail, {
+//     "slug": slug
+// });
 
 // Assign the article variable to the article content from Prepr
-const article = articleQuery.data.value.Article;
+const article = {};
 
 </script>
